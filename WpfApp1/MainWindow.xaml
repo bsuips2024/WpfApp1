@@ -4,15 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+               xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Мое первое окно" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="Мое первое окно" Height="200" Width="300" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid Background="Lavender">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label" Grid.Column="2" Content="привет" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Button x:Name="btn" Grid.Column="0" Grid.ColumnSpan="2"  Click="btn_Click">button</Button>
+        <TextBlock TextWrapping="Wrap" Text="Съешь этих прекрасных булочек" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"/>
+        <TextBlock TextWrapping="Wrap" Text="Съешь этих прекрасных булочек" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
+        <GridSplitter Grid.Column="1" Width="10" HorizontalAlignment="Center"
+                      VerticalAlignment="Stretch" Background="AliceBlue" />
     </Grid>
+
 </Window>
